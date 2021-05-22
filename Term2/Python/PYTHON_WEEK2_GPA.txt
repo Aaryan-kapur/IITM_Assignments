@@ -1,0 +1,93 @@
+1
+
+a=[]
+for i in range(3):
+    a.append(int(input("")))
+a.sort()
+if(a[2] **2 == (a[0]**2 + a[1]**2)):
+  print("YES")
+else:
+  print("NO")
+  
+  2
+  
+  t = int(input(""))
+if(t<=0 or t>=24):
+    print("INVALID")
+elif(t>=0 and t<=5):
+    print("NIGHT")
+elif(t>=6 and t<=11):
+    print("MORNING")
+elif(t>=12 and t<=17):
+    print("AFTERNOON")
+elif(t>=18 and t<=23):
+    print("EVENING")
+    
+3
+    
+a = []
+A = ("YES")
+sum = []
+for i in range(5):
+  a.append(int(input()))
+for i in range(len(a)):
+  if(i != 4):
+    if((a[i] + a[i+1])%2 !=0):
+      A = ("NO")
+print(A)
+
+4
+
+s = input()
+s = s.lower()
+vowels = ""
+if "a" in s:
+    vowels+="a"
+if "e" in s:
+    vowels+="e"
+if "i" in s:
+    vowels+="i"
+if "o" in s:
+    vowels+="o"
+if "u" in s:
+    vowels+="u"
+print(vowels)
+
+5
+
+a = []
+ages =[]
+for i in range(4):
+    a.append(input(""))
+age1 = a[1].split("-")
+age2 = a[3].split("-")
+ages.append(age1)
+ages.append(age2)
+if(ages[0][2] < ages[1][2]):
+  print(a[2])
+elif(ages[0][2] >ages[1][2] ):
+  print(a[0])
+else:
+  if(ages[0][1] < ages[1][1]):
+    print(a[2])
+  elif(ages[0][1] >ages[1][1] ):
+    print(a[0])
+  else:
+    if(ages[0][0] < ages[1][0]):
+      print(a[2])
+    elif(ages[0][0] > ages[1][0] ):
+      print(a[0])
+    else:
+      if(a[0] > a[2]):
+        print(a[2])
+      elif(a[0] < a[2]):
+        print(a[0])
+ 6
+ 
+ a = input("")
+if(((ord(a[0]) >= 41 and ord(a[0]) <=ord("Z")) or (ord(a[0]) >= 61 and ord(a[0]) <=ord("z"))) and (len(a) >= 8 and len(a) <=32) and (("/" not in a) and ("\'" not in a) and ("\"" not in a) and ("\\" not in a) and ("=" not in a) and (" " not in a))):
+  print(True)
+else:
+  print(False)
+  
+
