@@ -60,4 +60,44 @@ for num in range(lower, upper):
            
 5
 
-
+a = input()
+def findFreq(s) :
+  aa = []
+  i = 0
+  while( i < len(s) - 1) :
+    count = 1
+    while s[i] == s[i + 1] :
+      i += 1
+      count += 1
+      if i + 1 == len(s):
+        break
+    aa.append([str(s[i]) , str(count)])
+    i += 1
+  return(aa)
+def countEach(test_str):
+  all_freq = {}
+  for i in test_str:
+    if i in all_freq:
+        all_freq[i] += 1
+    else:
+        all_freq[i] = 1
+  return (all_freq)
+freqList = findFreq(a)
+freqEach = countEach(a)
+ans =("valid")
+if(a[0] not in "6789"):
+  ans =("invalid")
+if(len(a) != 10):
+  ans =("invalid")
+for i in freqList:
+  if(int(i[1]) > 5 ):
+    ans =("invalid")
+for i in freqEach.values():
+  if(i > 7 ):
+    ans =("invalid")
+for i in a:
+  if i.isnumeric():
+    continue
+  else:
+    ans =("invalid")
+print(ans)
