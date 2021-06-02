@@ -1,7 +1,23 @@
+1
 
+x=input()
+count=0
+P=[]
+while(x!="END"):
+ P.append(float(x))
+ x=input()
+sum=0
+num=0
+for i in range(len(P)):
+  sum+=P[i]
+avg=(sum/len(P))
+for i in range(len(P)):
+  num+=(P[i]-avg)**2
+#print(round(((num)/(len(P)-1))**(0.5)
+m=((num)/(len(P)-1))**(0.5)
+print('%.2f'%(m))
 
-
-4
+2
 
 def maxDepth(S):
     current_max = 0
@@ -37,3 +53,39 @@ else:
     print (maxDepth(a))
   else:
     print("Not matched")
+
+3
+
+l=[]
+while True:
+    x=input()
+    if(x==''):
+        break
+    else:
+        l.append(int(x))
+l=sorted(l)
+for i in l:
+  flag=0
+  for j in l:
+    if i+j in l :
+      if i!=j :
+        print(i,j)
+      if( i==j and flag==0 and l.count(i)>1):
+        flag=1
+        print(i,j)
+ 
+ 4
+ 
+ x=input()
+z=[]
+while bool(x)!=False:
+  x=x.split(" ")
+  z.append(x)
+  x=input()
+y=""
+for j in range(len(z[0])-1,-1,-1):
+  y=""
+  for i in range(len(z)):
+    y+=z[i][j]+" "
+  y=y[:-1]
+  print(y)
